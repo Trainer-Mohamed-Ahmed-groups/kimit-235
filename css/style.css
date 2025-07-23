@@ -1,128 +1,97 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
-
-:root {
-    --main-color: rgb(0, 255, 89);
-}
 body {
-    font-family: "Cairo", sans-serif;
-    height: 5000px;
+    height: 8000px;
     box-sizing: border-box;
 }
-/* Tag selector */
-p {
-    color: var(--main-color);
+span {
+    background: #f00;
+    height: 50px;
+    width: 250px;
+    padding: 40px;
+    display: inline-block;
 }
-/* Class selector */
-.test {
-    color: blue;
-    height: 100px;
-    width: 100px;
-    background-color: #787878;
-    font-size: 20px;
-    font-weight: 800;
-    background-color: var(--main-color);
+li {
+    list-style: decimal;
+    background: #00f;
+    list-style-position: inside;
+    /* list-style-image: url("../images/lion.jpeg"); */
 }
-/* .test {
-    color: rgb(130, 211, 139);
-} */
-/* ID selector */
-#testId {
-    color: aqua;
-}
-
-/* Conventions */
-/*  1- camel case : employeeEmail */
-/*  2- snake case : employee_email */
-/*  3- Kebab case : employee-email */
-/*  4- Pascal case : EmployeeEmail */
-section {
-    width: calc(50vw + 10px);
-}
-
-.bgImage {
-    height: 300px;
-    background-image: linear-gradient(45deg, #0000008a, #0000007a), url(../images/lion.jpeg);
-    /* background-repeat: no-repeat;
-    background-position: 60px 100px; */
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.gradient {
+/* .overExample {
     height: 200px;
     width: 200px;
-    /* background-image: repeating-linear-gradient(45deg, black, transparent 100px); */
-    /* background-image: repeating-radial-gradient(black, transparent 100px); */
-    background-image: conic-gradient(#f00, #00f);
+    background-color: aqua;
+    overflow: auto;
+    text-indent: 33px;
+    line-height: 3;
+    word-spacing: 14px;
+    letter-spacing: 3px;
+} */
+.card {
+    position: relative;
+    height: 120px;
+    width: 80px;
+    transition: 1s all ease-in-out;
+    backface-visibility: hidden;
+}
+.card:hover {
+    transform: rotateY(180deg);
+}
+.front,
+.back {
+    position: absolute;
+    inset: 0;
 }
 
-.borderExample {
-    height: 100px;
-    width: 100px;
-    border-color: #00f red green aqua;
-    border-width: 3px 5px 10px 20px;
-    border-style: solid;
+.front {
+    background-color: red;
 }
-.loading {
-    height: 50px;
-    width: 50px;
-    border-left: 2px solid #f00;
-    border-right: 2px solid #f00;
-    border-bottom: 2px solid #f00;
-    border-top: 2px solid #f00;
-    border-radius: 10px;
+.back {
+    transform: rotateY(180deg);
+    background-color: #00f;
 }
 
-.spaceExample {
+.textShadowExplain {
+    text-shadow: 4px 9px 5px #f00;
+}
+
+.boxShadowExplain {
     height: 150px;
     width: 150px;
-    background-color: rgb(67, 151, 207);
-    /* margin-left: 40px; */
-    margin-inline-start: 40px;
-    padding: 10px;
+    background-color: #e0e0e0;
+    margin: auto;
+    box-shadow: inset 15px 15px 15px 37px #080;
+}
+.sizing {
+    height: 200px;
+    width: 200px;
+    padding: 50px;
+    border: solid 10px #f00;
+}
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+h1 {
+    font-size: 5rem;
 }
 
-.parent .now ~ .child {
-    border: 2px solid;
-    margin-bottom: 5px;
+.child {
+    background-color: #f00;
+    width: 25%;
+    text-align: center;
+    font-size: 2rem;
 }
 
-/*
-/ Forward slash
-\ Backslash
-* Asterisk
-- Hyphen || Dash
-( Parantheses
-[ Bracket
-{ Curly bracket
- . Dot
- ~ Tilde
- # Hash
- ! Exclamation mark
- : Colon
- ; Semi colon
-*/
-.thankYou::selection {
-    background-color: red;
-    color: rgb(194, 236, 25);
-}
-.thankYou::first-letter {
-    font-size: 25px;
-    font-weight: bold;
-}
-.thankYou::first-line {
-    text-decoration: underline;
+@media (max-width: 650px) {
+    :root {
+        font-size: 8px;
+    }
+    .child {
+        width: 100%;
+    }
 }
 
-li::marker {
-    color: blue;
-}
-
-.new::after {
-    content: "From CSS";
-    color: red;
-}
-.new::before {
-    content: "From CSS";
-    background-color: #080;
+@media (min-width: 651px) and (max-width: 1000px) {
+    .child {
+        width: 50%;
+    }
 }
