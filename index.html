@@ -4,64 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--?------------------ My styles  -------------------->
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <!-- <link rel="stylesheet" href="./css/all.min.css"> -->
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
-
+    <title>My form</title>
 </head>
 
 <body>
-    <!-- <p>This is P</p>
-    <p>This is P</p>
-    <div class="test">This is for test</div>
-    <div id="testId">This is for ID</div>
-
-    <section>This is section</section>
-
-    <hr>
-    <div class="bgImage">This is bg image</div>
-    <div class="gradient"></div>
-
-    <div class="borderExample">This is for border</div>
-
-    <div class="loading"></div>
-
-    <a href="./index-ar.html">عربى</a>
-    <div class="spaceExample">This is example</div>
-    <div class="parent"> Parent
-        <div class="ok"> OK
-
-            <div class="child">This is child 1</div>
-            <div class="child">This is child 2</div>
-            <div class="now">This is NOW 3 </div>
-            <div class="child">This is child 4</div>
-            <div class="child">This is child 5</div>
-        </div>
+    <div class="formContainer">
+        <h1>Event registration</h1>
+        <h3>registration bla bla</h3>
+        <form action="./thankyou.html" method="post">
+            <label for="username">Name</label>
+            <div class="flex firstNameContainer">
+                <div>
+                    <div class="inputContainer flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                            <path fill="#ffffff"
+                                d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z" />
+                        </svg>
+                        <input type="text" id="username" name="firstName">
+                    </div>
+                    <div class="bottomText">First</div>
+                </div>
+                <div>
+                    <div class="inputContainer">
+                        <input type="text" id="username" name="lastName">
+                    </div>
+                    <div class="bottomText">Last</div>
+                </div>
+            </div>
+            <label for="email">Email</label>
+            <div class="inputContainer flex">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path fill="#ffffff"
+                        d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z" />
+                </svg>
+                <input type="email" id="email" name="email">
+            </div>
+            <label for="phone">Phone</label>
+            <div class="inputContainer flex">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path fill="#ffffff"
+                        d="M144 128C144 92.7 172.7 64 208 64L432 64C467.3 64 496 92.7 496 128L496 512C496 547.3 467.3 576 432 576L208 576C172.7 576 144 547.3 144 512L144 128zM208 128L208 432L432 432L432 128L208 128zM320 536C337.7 536 352 521.7 352 504C352 486.3 337.7 472 320 472C302.3 472 288 486.3 288 504C288 521.7 302.3 536 320 536z" />
+                </svg>
+                <input type="text" id="phone" name="phone">
+            </div>
+            <label for="topic">Topic</label>
+            <div class="inputContainer flex">
+                <select name="topic" id="topic">
+                    <option value="" disabled selected> </option>
+                    <option value="topic1">Topic 1</option>
+                    <option value="topic2">Topic 2</option>
+                    <option value="topic3">Topic 3</option>
+                    <option value="topic4">Topic 4</option>
+                </select>
+            </div>
+            <label for="slot">Preferred slot</label>
+            <div class="inputContainer flex">
+                <select name="slot" id="slot">
+                    <option value="" disabled selected> </option>
+                    <option value="slot1">slot 1</option>
+                    <option value="slot2">slot 2</option>
+                    <option value="slot3">slot 3</option>
+                    <option value="slot4">slot 4</option>
+                </select>
+            </div>
+            <input type="submit" value="Sign me up">
+        </form>
     </div>
 
-    <p class="thankYou">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quaerat cum amet distinctio
-        nostrum fugiat obcaecati repudiandae. Tenetur sed quia aliquid doloremque, sint quod maxime. Officia officiis
-        tempore recusandae praesentium.
-        Minima, incidunt fugit quisquam fugiat nobis illum magnam voluptatem eaque soluta vero in reiciendis fuga totam
-        laudantium. Perspiciatis libero quos ea esse expedita nemo, maxime deleniti nulla molestias ratione iusto.
-        Quidem animi alias eligendi eius, sequi ipsum blanditiis maiores pariatur sit, reiciendis velit molestiae
-        sapiente soluta dolor error modi aut assumenda commodi non unde in debitis odio. Corporis, odit necessitatibus?
-        Consequatur, iure. Amet molestiae nemo eveniet corporis aliquid consequuntur quibusdam, nostrum dolor distinctio
-        sequi, magni, hic rerum atque veritatis esse perspiciatis! Quidem consequatur iure saepe, tempora voluptatum
-        veniam et. Accusantium.
-        Suscipit tenetur obcaecati cumque laboriosam soluta aperiam fugiat, aliquid est illo delectus natus eligendi
-        possimus recusandae, quidem mollitia voluptatum dolorem id modi. Ex, expedita a. Id iure asperiores amet soluta.
-    </p>
-
-    <ul>
-        <li>OK</li>
-        <li>OK</li>
-        <li>OK</li>
-        <li>OK</li>
-    </ul>
-    -->
-
-    <div class="new">This is new</div>
 </body>
 
 </html>
+
+
+<!-- -->
