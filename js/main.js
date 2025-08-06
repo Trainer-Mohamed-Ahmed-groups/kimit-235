@@ -1,137 +1,151 @@
-console.log("Hello from external")
+"use strict";
+
+var x = 5
+if (x > 40) {
+    console.log("Five is greater")
+}
+else {
+    console.log("Five is not greater")
+}
+
+//////////////////////////////////////////////////////
+var username = "Mohamed";
+
+if (username == 'Ali') {
+    console.log("This is Ali")
+}
+else {
+    console.log("This is Not Ali")
+}
+/***************************** Operators **************************************/
+
+var y = 10;
 
 
+console.log(y++)
+console.log(--y)
+console.log(y)
+console.log(y++)
+console.log(y)
 
 
-
-/*
-Multi lines comment
-*/
-
-// One line comment
-
-var x = 10,
-    y = 60,
-    z = x + y;
-
-console.log(z)
-
-/******************************* Primitive datatypes ******************************/
-// String
-
-var username = "Mohamed",
-    lastName = "Ahmed"
-
-console.log(typeof username)
-
-console.log(username)
-console.log(username + " " + lastName)
-// Number
-// var myAge = prompt("Please enter your age");
-// console.log(`Hello ${username} your age is ${myAge}`)
-// console.log(+myAge)
-
-// Boolean
-
-var visited = true;
-
-console.log(typeof visited)
+try {
+    consol.log(15 % 3)
+} catch (error) {
+    console.error("HINT : " + error.message)
+}
+finally {
+    console.log("This is the final message")
+}
 
 
-// Undefined
+console.log("*******************")
+console.log(5 == 5)
+console.log(5 != 5)
+console.log(5 === '5')
+console.log(5 !== '5')
 
-var t;
+console.log("*******************")
+
+
+var t = 50;
 
 console.log(t)
+t %= 10;
+console.log(t)
 
-// Null
-var mySpan = document.getElementById('test')
+console.log("*******************")
 
-console.log(mySpan)
-
-
-/******************************* NON Primitive datatypes ******************************/
-// Object
-
-var car = {
-    name: "Mercedes",
-    model: 2020,
-    isSold: false,
-    owner: undefined,
-    // key : value
+if (10 > 9 && 10 > 80) {
+    console.log("OK")
+}
+else {
+    console.log("NO")
 }
 
-console.log(car)
-console.log(car)
-// Bracket notation
-console.log(car['model'])
+console.log("*******************")
 
-// Dot notation
-console.log(car.name)
+console.log("OK" && 0 && "NO")
+console.log("OK" && 45 && "NO")
+console.log("OK" && null && "NO")
+console.log("OK" && undefined && "NO")
+console.log("OK" && "" && "NO")
+console.log("OK" && " " && "NO")
+console.log("OK" && [] && "NO")
+console.log("OK" && {} && "NO")
+console.log("OK" && NaN && "NO")
+console.log("OK" && Infinity && "NO")
+
+// AND operator return first false and last true
+
+console.log("*******************")
+console.log("OK" || 0 || "NO")
+console.log(0 || 45 || "NO")
+console.log(undefined || null || "NO")
+console.log("OK" || undefined || "NO")
+console.log("OK" || "" || "NO")
+console.log(null || " " || "NO")
+console.log("OK" || [] || "NO")
+console.log(0 || '' || "NO")
+console.log("OK" || NaN || "NO")
+console.log("OK" || Infinity || "NO")
+
+// OR operator return first True and last false
 
 
-console.log(typeof car)
+
+if (10 > 9) {
+    console.log("test")
+}
+else {
+    console.log("test now")
+}
+/***************************************************************** */
+var dayNumber = 2
+// +prompt("Please enter the day number");
 
 
-
-// Function
-
-// Void function
-// function greet() {
-//     console.log("Hello I am good")
-// }
-
-var greet = function (username) {
-    console.log("Hello I am good " + username)
+switch (dayNumber) {
+    case 1:
+    case 7:
+        console.log("This is Weekend")
+        break;
+    case 2:
+        console.log("This is Sunday")
+        break;
+    case 3:
+        console.log("This is Monday")
+        break;
+    case 4:
+        console.log("This is Tuesday")
+        break;
+    case 5:
+        console.log("This is Wednesday")
+        break;
+    case 6:
+        console.log("This is Thursday")
+        break;
+    default:
+        console.log("Invalid")
 }
 
-greet("Mostafa")
-greet("Peter")
 
 
-function add(a = 0, b = 0) {
-    return a + b
+function getRectArea(width, height) {
+    if (isNaN(height) || isNaN(width)) {
+        throw "Invalid input"
+    }
+    else {
+        return width * height
+    }
+}
+try {
+    console.log(getRectArea('E', 6))
+} catch (error) {
+    console.error(error)
 }
 
 
-console.log(add(45, 45))
-console.log(add(45, 5) * 3)
-console.log(add(10))
-console.log(add())
 
-
-console.log(45 / 'A')
-console.log(45 / 0)
-
-
-// Array
-
-var students = ["Mohamed", "Mahmoud", "Omar", "Nour"];
-
-// students[0] = "Mohamed"
-// students[1] = "Ali"
-console.log(typeof students)
-console.log(students)
-
-
-console.log(students[0])
-console.log(students[1])
-console.log(students[2])
-console.log(students[4])
-console.log(students[-1])
-console.log(students.length)
-console.log(students[students.length - 1])
-console.log(students.at(-1))
-
-var employees = new Array(5).fill('dfdf');
-// employees[0] = "test"
-// employees[1] = "test2"
-console.log(employees)
-
-
-var mix = [12, "test", undefined, true, { name: 'Ali', courses: ["HTML", "CSS"] }, [4, 5, 6, 7]]
-console.log(mix)
-console.log(mix[4].name)
-console.log(mix[4].courses[1])
-console.log(mix[4]['courses'][1])
-console.log(mix[5][2])
+q = 80;
+console.log(q)
