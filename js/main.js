@@ -1,151 +1,90 @@
 "use strict";
 
-var x = 5
-if (x > 40) {
-    console.log("Five is greater")
+var x = 0;
+while (x < 5) {
+    console.log(x);
+    x++;
 }
-else {
-    console.log("Five is not greater")
-}
-
-//////////////////////////////////////////////////////
-var username = "Mohamed";
-
-if (username == 'Ali') {
-    console.log("This is Ali")
-}
-else {
-    console.log("This is Not Ali")
-}
-/***************************** Operators **************************************/
-
-var y = 10;
+console.log("------------")
 
 
-console.log(y++)
-console.log(--y)
-console.log(y)
-console.log(y++)
-console.log(y)
+// /////////////////////////////////////////////
 
+var y = 0;
+do {
+    console.log(y);
+    y++;
+} while (y < 5);
+console.log("------------")
 
-try {
-    consol.log(15 % 3)
-} catch (error) {
-    console.error("HINT : " + error.message)
-}
-finally {
-    console.log("This is the final message")
+// /////////////////////////////////////////////
+for (var z = 0; z < 5; z++) {
+    console.log(z);
 }
 
+console.log("------------")
 
-console.log("*******************")
-console.log(5 == 5)
-console.log(5 != 5)
-console.log(5 === '5')
-console.log(5 !== '5')
-
-console.log("*******************")
+/* Get Odd */
 
 
-var t = 50;
-
-console.log(t)
-t %= 10;
-console.log(t)
-
-console.log("*******************")
-
-if (10 > 9 && 10 > 80) {
-    console.log("OK")
-}
-else {
-    console.log("NO")
+for (var i = 0; i < 10; i++) {
+    if (i % 2 === 1) console.log(i)
 }
 
-console.log("*******************")
-
-console.log("OK" && 0 && "NO")
-console.log("OK" && 45 && "NO")
-console.log("OK" && null && "NO")
-console.log("OK" && undefined && "NO")
-console.log("OK" && "" && "NO")
-console.log("OK" && " " && "NO")
-console.log("OK" && [] && "NO")
-console.log("OK" && {} && "NO")
-console.log("OK" && NaN && "NO")
-console.log("OK" && Infinity && "NO")
-
-// AND operator return first false and last true
-
-console.log("*******************")
-console.log("OK" || 0 || "NO")
-console.log(0 || 45 || "NO")
-console.log(undefined || null || "NO")
-console.log("OK" || undefined || "NO")
-console.log("OK" || "" || "NO")
-console.log(null || " " || "NO")
-console.log("OK" || [] || "NO")
-console.log(0 || '' || "NO")
-console.log("OK" || NaN || "NO")
-console.log("OK" || Infinity || "NO")
-
-// OR operator return first True and last false
-
-
-
-if (10 > 9) {
-    console.log("test")
-}
-else {
-    console.log("test now")
-}
-/***************************************************************** */
-var dayNumber = 2
-// +prompt("Please enter the day number");
-
-
-switch (dayNumber) {
-    case 1:
-    case 7:
-        console.log("This is Weekend")
-        break;
-    case 2:
-        console.log("This is Sunday")
-        break;
-    case 3:
-        console.log("This is Monday")
-        break;
-    case 4:
-        console.log("This is Tuesday")
-        break;
-    case 5:
-        console.log("This is Wednesday")
-        break;
-    case 6:
-        console.log("This is Thursday")
-        break;
-    default:
-        console.log("Invalid")
+console.log("------------")
+for (var o = 1; o < 10; o += 2) {
+    console.log(o)
 }
 
 
 
-function getRectArea(width, height) {
-    if (isNaN(height) || isNaN(width)) {
-        throw "Invalid input"
-    }
-    else {
-        return width * height
-    }
+console.log("------------")
+for (var p = 1; p <= 10; p++) {
+    // if (p === 7) break;
+    // if (p === 7) continue;
+    if (p % 2 === 0) continue;
+    console.log(p)
 }
-try {
-    console.log(getRectArea('E', 6))
-} catch (error) {
-    console.error(error)
-}
+console.log("------------")
 
 
-
-q = 80;
+/*******************************************************************/
+const q = 5;
 console.log(q)
+
+test()
+
+function test() {
+    const t = 5;
+    console.log("This is test : " + t);
+}
+
+
+{
+    var t = 10;
+}
+console.log(t);
+
+
+var f = 401;
+
+var f = 500; // redeclaring with var is allowed
+
+console.log(f)
+//////////////////////////////////////////////////////////////////
+
+
+console.log(3 * "5")
+console.log(3 + "5")
+console.log(10 > 4)
+
+console.log(true == 1)
+
+console.log(Boolean(" "))
+
+
+var u = "10.9264"
+
+console.log(parseInt(u))
+console.log(parseFloat(u))
+console.log(Number(u))
