@@ -1,90 +1,75 @@
-"use strict";
+var courseOne = "FrontEnd course and UI/UX design course",
+    courseTwo = "Backend course"
 
-var x = 0;
-while (x < 5) {
-    console.log(x);
-    x++;
-}
-console.log("------------")
+console.log(courseOne.length)
+console.log(courseOne[0])
+console.log(courseOne.charAt(0))
+console.log(courseOne.charCodeAt(0))
+console.log(String.fromCharCode(70))
 
-
-// /////////////////////////////////////////////
-
-var y = 0;
-do {
-    console.log(y);
-    y++;
-} while (y < 5);
-console.log("------------")
-
-// /////////////////////////////////////////////
-for (var z = 0; z < 5; z++) {
-    console.log(z);
-}
-
-console.log("------------")
-
-/* Get Odd */
+console.log(courseOne + courseTwo)
+console.log(`${courseOne} ${courseTwo}`)
+console.log(courseOne.concat(courseTwo))
 
 
-for (var i = 0; i < 10; i++) {
-    if (i % 2 === 1) console.log(i)
-}
+console.log(courseOne.startsWith('Front'))
+console.log(courseOne.endsWith('e '))
+console.log(courseOne.includes('end'))
+console.log(courseOne.indexOf('en'))
+console.log(courseOne.indexOf('e'))
+console.log(courseOne.lastIndexOf('e'))
 
-console.log("------------")
-for (var o = 1; o < 10; o += 2) {
-    console.log(o)
-}
+
+console.log(courseOne.match(/e/g))
+console.log(courseOne.match(/e/g).length)
+console.log(courseOne.match(/e/gi))
+
+
+console.log(courseTwo.repeat(20))
 
 
 
-console.log("------------")
-for (var p = 1; p <= 10; p++) {
-    // if (p === 7) break;
-    // if (p === 7) continue;
-    if (p % 2 === 0) continue;
-    console.log(p)
-}
-console.log("------------")
+console.log(courseOne.replace('UI', "test"))
 
 
-/*******************************************************************/
-const q = 5;
-console.log(q)
-
-test()
-
-function test() {
-    const t = 5;
-    console.log("This is test : " + t);
-}
+console.log(courseOne.search('course'))
 
 
-{
-    var t = 10;
-}
-console.log(t);
+console.log(courseOne.slice(3, 10))
 
 
-var f = 401;
-
-var f = 500; // redeclaring with var is allowed
-
-console.log(f)
-//////////////////////////////////////////////////////////////////
+console.log(courseOne.split(' '))
+console.log(["test", "Hello", "OK"].join(' '))
 
 
-console.log(3 * "5")
-console.log(3 + "5")
-console.log(10 > 4)
 
-console.log(true == 1)
-
-console.log(Boolean(" "))
+var username = 'Mahmoud'
+console.log(username.substring(2, 6))
+console.log(username.substr(2, 6))
 
 
-var u = "10.9264"
+console.log(username.toUpperCase())
+console.log(username.toLowerCase())
 
-console.log(parseInt(u))
-console.log(parseFloat(u))
-console.log(Number(u))
+
+var message = "    I     am    a    developer      ";
+
+
+
+console.log(message)
+console.log(message.trimStart())
+console.log(message.trimEnd())
+console.log(message.trim())
+
+
+console.log(Math.random())
+console.log(Math.ceil(5.1))
+console.log(Math.floor(5.999))
+console.log(Math.round(3.4))
+console.log(Math.max(45, 54, 87, 48, 21, 48))
+console.log(Math.min(45, 54, 87, 48, 21, 48))
+console.log(Math.pow(2, 3))
+console.log(Math.sqrt(25))
+console.log(Math.PI)
+console.log(Math.abs(-12))
+console.log(Math.abs(12))
