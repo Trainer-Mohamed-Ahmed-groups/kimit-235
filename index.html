@@ -8,210 +8,368 @@
     <title>Front end session</title>
 
     <style>
-        .alert {
-            background-color: #080;
+        body {
+            height: 5000px;
         }
+
+        /* nav {
+            background-color: rgba(165, 42, 42, 0.568);
+        } */
     </style>
 </head>
 
 <body>
-    <div class="alert" role="alert">
-        A simple primary alert—check it out!
-    </div>
-    <div class="dropdown" data-bs-theme="light">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButtonLight"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            Default dropdown
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLight">
-            <li><a class="dropdown-item active" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li>
-                <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the first item’s accordion body.</strong> It is shown by default, until the
+                        collapse
+                        plugin adds the appropriate classes that we use to style each element. These classes control the
+                        overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
+                        this with custom CSS or overriding our default variables. It’s also worth noting that just about
+                        any
+                        HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It’s also worth noting
+                        that
+                        just about any HTML can go within the <code>.accordion-body</code>, though the transition does
+                        limit
+                        overflow.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the
+                        collapse plugin adds the appropriate classes that we use to style each element. These classes
+                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
+                        modify any of this with custom CSS or overriding our default variables. It’s also worth noting
+                        that
+                        just about any HTML can go within the <code>.accordion-body</code>, though the transition does
+                        limit
+                        overflow.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+        </div>
+        <hr>
+        <div id="liveAlertPlaceholder"></div>
+        <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+        <h1>Example heading <span class="badge text-bg-info">New</span></h1>
+
+
+        <div class="card text-bg-dark w-50 m-auto">
+            <img src="./images/image.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                    content. This content is a little bit longer.</p>
+                <p class="card-text"><small>Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
         </ul>
-    </div>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch demo modal
+        </button>
 
-
-    <div class="container">This is container</div>
-
-
-    <hr>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-4 col-xl-2">This is col</div>
-            <div class="col-md-6 col-lg-4 col-xl-2">This is col</div>
-            <div class="col-md-6 col-lg-4 col-xl-2">This is col</div>
-            <div class="col-md-6 col-lg-4 col-xl-2">This is col</div>
-            <div class="col-md-6 col-lg-4 col-xl-2">This is col</div>
-            <div class="col-md-6 col-lg-4 col-xl-2">This is col</div>
-        </div>
-    </div>
-    <hr>
-
-
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-6">
-            <div class="col">This is Column</div>
-            <div class="col">This is Column</div>
-            <div class="col">This is Column</div>
-            <div class="col">This is Column</div>
-            <div class="col">This is Column</div>
-            <div class="col">This is Column</div>
-        </div>
-    </div>
-
-    <table class="table w-50 m-auto mt-4 table-success table-hover table-bordered">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>John</td>
-                <td>Doe</td>
-                <td>@social</td>
-            </tr>
-        </tbody>
-    </table>
-
-
-    <form>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-
-    <label for="range1" class="form-label">Example range</label>
-    <input type="range" class="form-range" id="range1">
-
-    <form class="form-floating">
-        <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com"
-            value="test@example.com">
-        <label for="floatingInputInvalid">Invalid input</label>
-    </form>
-
-    <div class="container">
-        <form class="row g-3 needs-validation" novalidate>
-            <div class="col-md-4">
-                <label for="validationCustom01" class="form-label">First name</label>
-                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            <div class="col-md-4">
-                <label for="validationCustom02" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
-            </div>
-            <div class="col-md-4">
-                <label for="validationCustomUsername" class="form-label">Username</label>
-                <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
-                    <input type="text" class="form-control" id="validationCustomUsername"
-                        aria-describedby="inputGroupPrepend" required>
-                    <div class="invalid-feedback">
-                        Please choose a username.
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <label for="validationCustom03" class="form-label">City</label>
-                <input type="text" class="form-control" id="validationCustom03" required>
-                <div class="invalid-feedback">
-                    Please provide a valid city.
-                </div>
-            </div>
-            <div class="col-md-3">
-                <label for="validationCustom04" class="form-label">State</label>
-                <select class="form-select" id="validationCustom04" required>
-                    <option selected disabled value="">Choose...</option>
-                    <option>...</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please select a valid state.
-                </div>
-            </div>
-            <div class="col-md-3">
-                <label for="validationCustom05" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="validationCustom05" required>
-                <div class="invalid-feedback">
-                    Please provide a valid zip.
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                        Agree to terms and conditions
-                    </label>
-                    <div class="invalid-feedback">
-                        You must agree before submitting.
+        </div>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Launch static backdrop modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur non atque magni sint.
+                        Voluptatibus enim aspernatur vitae provident deserunt fuga, eaque explicabo, tempore id ullam
+                        inventore distinctio modi at sapiente.
+                        Explicabo nihil ullam similique facere omnis maiores illum cumque soluta cum culpa rem autem
+                        mollitia deleniti repellat distinctio perferendis, delectus asperiores, et maxime inventore
+                        temporibus. Illo pariatur sed quaerat non!
+                        Autem, nisi ipsa beatae aspernatur culpa consequuntur enim ex quia, facilis aut libero, facere
+                        eum fugit distinctio sit ipsam voluptatem ducimus vel magnam temporibus maiores repudiandae
+                        repellat eveniet? Nostrum, quod?
+                        Natus fugiat laborum numquam odit doloremque asperiores id consequuntur voluptatum fuga deserunt
+                        cum quidem voluptatem dolor, quasi doloribus praesentium officiis maxime incidunt quia in nemo
+                        aspernatur totam non! Ratione, voluptate.
+                        Quaerat, illo atque nisi obcaecati sapiente accusantium odio placeat saepe autem hic numquam
+                        commodi quae fugit sint! Explicabo, quos eius ducimus consequuntur amet, sunt praesentium
+                        dignissimos minus officia incidunt cupiditate.
+                        Alias ipsum soluta unde ratione, nisi modi, harum similique eius ex asperiores possimus cum
+                        neque voluptatem necessitatibus animi commodi? Pariatur quod error excepturi amet ea enim
+                        doloribus expedita eaque eveniet.
+                        Magnam non adipisci pariatur quos voluptatem hic vitae alias quia, dignissimos illo accusamus
+                        et. A doloremque alias fugiat voluptates blanditiis eaque atque, provident suscipit consequatur
+                        numquam repellat incidunt, possimus voluptate.
+                        Cumque temporibus sunt id, in nobis rerum harum eos fuga quidem, excepturi ullam veritatis,
+                        maxime voluptates magni! Magnam maxime minus laudantium voluptate modi. Debitis temporibus,
+                        nesciunt consequatur sapiente quas voluptatum!
+                        Tenetur, expedita. Commodi doloremque porro nulla assumenda eaque exercitationem dicta ex
+                        tempore harum necessitatibus provident laboriosam deserunt similique maxime reiciendis
+                        accusantium, illo officia autem quod modi! A pariatur fugiat necessitatibus.
+                        Dicta quae totam modi culpa, quibusdam dolore hic! Esse possimus sunt, architecto animi quia
+                        facilis consequatur nihil non quos aspernatur rem ea odio corporis voluptatem repudiandae
+                        molestiae! Quis, natus vitae.
+                        Repellat perferendis recusandae ea minus similique optio explicabo nisi sapiente cum. Ab
+                        laudantium cumque debitis iusto architecto itaque, quas eaque possimus odit facere quibusdam.
+                        Accusantium odit fugit vero inventore quibusdam.
+                        Quasi eaque veritatis ab quod voluptatibus facere officiis mollitia aspernatur nesciunt
+                        doloremque reiciendis doloribus aut eligendi adipisci eum voluptate iste, quaerat at aliquid
+                        laborum? Vero distinctio ipsam quibusdam nesciunt minima.
+                        Deleniti nulla est magni laudantium in cumque dolor iure? Rem quibusdam qui saepe deleniti ipsam
+                        iusto animi voluptates reprehenderit voluptatem dolores, non laboriosam consequuntur dignissimos
+                        temporibus iste corporis magni dolore?
+                        Aut fuga facere amet deleniti tenetur laudantium temporibus. Adipisci veritatis ea animi?
+                        Corporis libero animi ratione porro a nulla. Dolorum reprehenderit temporibus hic voluptate iure
+                        facere culpa praesentium, corrupti pariatur.
+                        Voluptatem illo quae animi, sapiente officiis aut magnam ratione consequuntur nemo. Quo iusto
+                        maiores ullam eius nesciunt ex. Commodi repellat nostrum labore cum? Dolorem a ad quibusdam, ab
+                        neque laboriosam.
+                        Quam sed aliquam in neque reiciendis impedit similique ad fuga doloremque, alias laborum fugit
+                        minima quo animi necessitatibus harum est vitae sit ullam nemo nulla, ducimus quae facere
+                        suscipit. Ullam!
+                        Consectetur iusto recusandae saepe. Magnam sunt aliquam repudiandae explicabo qui aliquid iusto
+                        similique veniam rem. Accusamus magni veniam dignissimos, sed suscipit temporibus tempora esse
+                        sequi, minus quam incidunt porro deleniti.
+                        Consectetur cupiditate voluptas dolorem quae necessitatibus ullam laudantium odit similique
+                        accusamus, aliquid laborum quisquam fuga veritatis nulla perspiciatis adipisci neque aperiam
+                        veniam hic accusantium numquam excepturi laboriosam architecto. Illo, iusto.
+                        Eaque atque quod provident mollitia officiis vero deserunt esse laborum excepturi vel quis
+                        dolore perspiciatis recusandae cupiditate, odit animi aliquid, hic expedita nam. Ullam
+                        distinctio accusamus facere nulla nam assumenda?
+                        Enim perspiciatis molestias repellat laborum rem, incidunt obcaecati labore unde consectetur,
+                        autem, magnam asperiores non eligendi? Sit, libero expedita, cumque odio magnam, eligendi
+                        corrupti autem sint reprehenderit in aspernatur amet!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Understood</button>
                     </div>
                 </div>
             </div>
-            <div class="col-12">
-                <button class="btn btn-primary" type="submit">Submit form</button>
-            </div>
-        </form>
-    </div>
+        </div>
 
+        <hr>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            data-bs-whatever="@mdo">Open modal for @mdo</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            data-bs-whatever="@fat">Open modal for @fat</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+            data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                <input type="text" class="form-control" id="recipient-name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Message:</label>
+                                <textarea class="form-control" id="message-text"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Send message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                    type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane"
+                    type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false"
+                    disabled>Disabled</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">...one</div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                ...two</div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                ...three</div>
+            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab"
+                tabindex="0">...</div>
+        </div>
+    </div>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/main.js"></script>
     <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (() => {
-            'use strict'
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+        const appendAlert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('')
 
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            const forms = document.querySelectorAll('.needs-validation')
+            alertPlaceholder.append(wrapper)
+        }
 
-            // Loop over them and prevent submission
-            Array.from(forms).forEach(form => {
-                form.addEventListener('submit', event => {
-                    if (!form.checkValidity()) {
-                        event.preventDefault()
-                        event.stopPropagation()
-                    }
-
-                    form.classList.add('was-validated')
-                }, false)
+        const alertTrigger = document.getElementById('liveAlertBtn')
+        if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+                appendAlert('Nice, you triggered this alert message!', 'success')
             })
-        })()
+        }
+
+        const exampleModal = document.getElementById('exampleModal')
+        if (exampleModal) {
+            exampleModal.addEventListener('show.bs.modal', event => {
+                // Button that triggered the modal
+                const button = event.relatedTarget
+                // Extract info from data-bs-* attributes
+                const recipient = button.getAttribute('data-bs-whatever')
+                // If necessary, you could initiate an Ajax request here
+                // and then do the updating in a callback.
+
+                // Update the modal's content.
+                const modalTitle = exampleModal.querySelector('.modal-title')
+                const modalBodyInput = exampleModal.querySelector('.modal-body input')
+
+                modalTitle.textContent = `New message to ${recipient}`
+                modalBodyInput.value = recipient
+            })
+        }
     </script>
 </body>
 
