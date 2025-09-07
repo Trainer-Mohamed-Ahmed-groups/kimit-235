@@ -6,371 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>Front end session</title>
-
     <style>
-        body {
-            height: 5000px;
+        .test {
+            clear: both;
         }
-
-        /* nav {
-            background-color: rgba(165, 42, 42, 0.568);
-        } */
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
+    <div class="bg-info clearfix">
+        <button type="button" class="btn btn-secondary float-start">Example Button floated left</button>
+        <button type="button" class="btn btn-secondary float-end">Example Button floated right</button>
+    </div>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem magni ipsum fugit quidem. Accusantium reprehenderit
+        possimus architecto dolorem quam beatae nisi fuga labore totam illo distinctio libero ex, modi veniam.</p>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+    </svg>
+
+    <div class="fixed-bottom">
+        This is top
+    </div>
+
+    <div class="position-relative m-4">
+        <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0"
+            aria-valuemax="100" style="height: 1px;">
+            <div class="progress-bar" style="width: 100%"></div>
         </div>
-    </nav>
-    <div class="container">
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        Accordion Item #1
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the first item’s accordion body.</strong> It is shown by default, until the
-                        collapse
-                        plugin adds the appropriate classes that we use to style each element. These classes control the
-                        overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of
-                        this with custom CSS or overriding our default variables. It’s also worth noting that just about
-                        any
-                        HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        Accordion Item #2
-                    </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It’s also worth noting
-                        that
-                        just about any HTML can go within the <code>.accordion-body</code>, though the transition does
-                        limit
-                        overflow.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Accordion Item #3
-                    </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the
-                        collapse plugin adds the appropriate classes that we use to style each element. These classes
-                        control the overall appearance, as well as the showing and hiding via CSS transitions. You can
-                        modify any of this with custom CSS or overriding our default variables. It’s also worth noting
-                        that
-                        just about any HTML can go within the <code>.accordion-body</code>, though the transition does
-                        limit
-                        overflow.
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="alert alert-primary" role="alert">
-            A simple primary alert—check it out!
-        </div>
-        <hr>
-        <div id="liveAlertPlaceholder"></div>
-        <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
-        <h1>Example heading <span class="badge text-bg-info">New</span></h1>
-
-
-        <div class="card text-bg-dark w-50 m-auto">
-            <img src="./images/image.jpg" class="card-img" alt="...">
-            <div class="card-img-overlay">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-                <p class="card-text"><small>Last updated 3 mins ago</small></p>
-            </div>
-        </div>
-
-        <ul class="list-group list-group-horizontal">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-        </ul>
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Launch demo modal
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-            Launch static backdrop modal
-        </button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur non atque magni sint.
-                        Voluptatibus enim aspernatur vitae provident deserunt fuga, eaque explicabo, tempore id ullam
-                        inventore distinctio modi at sapiente.
-                        Explicabo nihil ullam similique facere omnis maiores illum cumque soluta cum culpa rem autem
-                        mollitia deleniti repellat distinctio perferendis, delectus asperiores, et maxime inventore
-                        temporibus. Illo pariatur sed quaerat non!
-                        Autem, nisi ipsa beatae aspernatur culpa consequuntur enim ex quia, facilis aut libero, facere
-                        eum fugit distinctio sit ipsam voluptatem ducimus vel magnam temporibus maiores repudiandae
-                        repellat eveniet? Nostrum, quod?
-                        Natus fugiat laborum numquam odit doloremque asperiores id consequuntur voluptatum fuga deserunt
-                        cum quidem voluptatem dolor, quasi doloribus praesentium officiis maxime incidunt quia in nemo
-                        aspernatur totam non! Ratione, voluptate.
-                        Quaerat, illo atque nisi obcaecati sapiente accusantium odio placeat saepe autem hic numquam
-                        commodi quae fugit sint! Explicabo, quos eius ducimus consequuntur amet, sunt praesentium
-                        dignissimos minus officia incidunt cupiditate.
-                        Alias ipsum soluta unde ratione, nisi modi, harum similique eius ex asperiores possimus cum
-                        neque voluptatem necessitatibus animi commodi? Pariatur quod error excepturi amet ea enim
-                        doloribus expedita eaque eveniet.
-                        Magnam non adipisci pariatur quos voluptatem hic vitae alias quia, dignissimos illo accusamus
-                        et. A doloremque alias fugiat voluptates blanditiis eaque atque, provident suscipit consequatur
-                        numquam repellat incidunt, possimus voluptate.
-                        Cumque temporibus sunt id, in nobis rerum harum eos fuga quidem, excepturi ullam veritatis,
-                        maxime voluptates magni! Magnam maxime minus laudantium voluptate modi. Debitis temporibus,
-                        nesciunt consequatur sapiente quas voluptatum!
-                        Tenetur, expedita. Commodi doloremque porro nulla assumenda eaque exercitationem dicta ex
-                        tempore harum necessitatibus provident laboriosam deserunt similique maxime reiciendis
-                        accusantium, illo officia autem quod modi! A pariatur fugiat necessitatibus.
-                        Dicta quae totam modi culpa, quibusdam dolore hic! Esse possimus sunt, architecto animi quia
-                        facilis consequatur nihil non quos aspernatur rem ea odio corporis voluptatem repudiandae
-                        molestiae! Quis, natus vitae.
-                        Repellat perferendis recusandae ea minus similique optio explicabo nisi sapiente cum. Ab
-                        laudantium cumque debitis iusto architecto itaque, quas eaque possimus odit facere quibusdam.
-                        Accusantium odit fugit vero inventore quibusdam.
-                        Quasi eaque veritatis ab quod voluptatibus facere officiis mollitia aspernatur nesciunt
-                        doloremque reiciendis doloribus aut eligendi adipisci eum voluptate iste, quaerat at aliquid
-                        laborum? Vero distinctio ipsam quibusdam nesciunt minima.
-                        Deleniti nulla est magni laudantium in cumque dolor iure? Rem quibusdam qui saepe deleniti ipsam
-                        iusto animi voluptates reprehenderit voluptatem dolores, non laboriosam consequuntur dignissimos
-                        temporibus iste corporis magni dolore?
-                        Aut fuga facere amet deleniti tenetur laudantium temporibus. Adipisci veritatis ea animi?
-                        Corporis libero animi ratione porro a nulla. Dolorum reprehenderit temporibus hic voluptate iure
-                        facere culpa praesentium, corrupti pariatur.
-                        Voluptatem illo quae animi, sapiente officiis aut magnam ratione consequuntur nemo. Quo iusto
-                        maiores ullam eius nesciunt ex. Commodi repellat nostrum labore cum? Dolorem a ad quibusdam, ab
-                        neque laboriosam.
-                        Quam sed aliquam in neque reiciendis impedit similique ad fuga doloremque, alias laborum fugit
-                        minima quo animi necessitatibus harum est vitae sit ullam nemo nulla, ducimus quae facere
-                        suscipit. Ullam!
-                        Consectetur iusto recusandae saepe. Magnam sunt aliquam repudiandae explicabo qui aliquid iusto
-                        similique veniam rem. Accusamus magni veniam dignissimos, sed suscipit temporibus tempora esse
-                        sequi, minus quam incidunt porro deleniti.
-                        Consectetur cupiditate voluptas dolorem quae necessitatibus ullam laudantium odit similique
-                        accusamus, aliquid laborum quisquam fuga veritatis nulla perspiciatis adipisci neque aperiam
-                        veniam hic accusantium numquam excepturi laboriosam architecto. Illo, iusto.
-                        Eaque atque quod provident mollitia officiis vero deserunt esse laborum excepturi vel quis
-                        dolore perspiciatis recusandae cupiditate, odit animi aliquid, hic expedita nam. Ullam
-                        distinctio accusamus facere nulla nam assumenda?
-                        Enim perspiciatis molestias repellat laborum rem, incidunt obcaecati labore unde consectetur,
-                        autem, magnam asperiores non eligendi? Sit, libero expedita, cumque odio magnam, eligendi
-                        corrupti autem sint reprehenderit in aspernatur amet!
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <hr>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-            data-bs-whatever="@mdo">Open modal for @mdo</button>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-            data-bs-whatever="@fat">Open modal for @fat</button>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
-            data-bs-whatever="@getbootstrap">Open modal for @getbootstrap</button>
-
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                <input type="text" class="form-control" id="recipient-name">
-                            </div>
-                            <div class="mb-3">
-                                <label for="message-text" class="col-form-label">Message:</label>
-                                <textarea class="form-control" id="message-text"></textarea>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Send message</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
-                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
-                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
-                    type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane"
-                    type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false"
-                    disabled>Disabled</button>
-            </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
-                tabindex="0">...one</div>
-            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                ...two</div>
-            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                ...three</div>
-            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab"
-                tabindex="0">...</div>
-        </div>
+        <button type="button"
+            class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill"
+            style="width: 2rem; height:2rem;">1</button>
+        <button type="button"
+            class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill"
+            style="width: 2rem; height:2rem;">2</button>
+        <button type="button"
+            class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-primary rounded-pill"
+            style="width: 2rem; height:2rem;">3</button>
     </div>
     <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script>
-        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-        const appendAlert = (message, type) => {
-            const wrapper = document.createElement('div')
-            wrapper.innerHTML = [
-                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-                `   <div>${message}</div>`,
-                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
-                '</div>'
-            ].join('')
 
-            alertPlaceholder.append(wrapper)
-        }
-
-        const alertTrigger = document.getElementById('liveAlertBtn')
-        if (alertTrigger) {
-            alertTrigger.addEventListener('click', () => {
-                appendAlert('Nice, you triggered this alert message!', 'success')
-            })
-        }
-
-        const exampleModal = document.getElementById('exampleModal')
-        if (exampleModal) {
-            exampleModal.addEventListener('show.bs.modal', event => {
-                // Button that triggered the modal
-                const button = event.relatedTarget
-                // Extract info from data-bs-* attributes
-                const recipient = button.getAttribute('data-bs-whatever')
-                // If necessary, you could initiate an Ajax request here
-                // and then do the updating in a callback.
-
-                // Update the modal's content.
-                const modalTitle = exampleModal.querySelector('.modal-title')
-                const modalBodyInput = exampleModal.querySelector('.modal-body input')
-
-                modalTitle.textContent = `New message to ${recipient}`
-                modalBodyInput.value = recipient
-            })
-        }
-    </script>
 </body>
 
 </html>
