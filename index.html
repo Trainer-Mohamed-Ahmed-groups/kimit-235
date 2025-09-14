@@ -6,49 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <title>Front end session</title>
+
     <style>
-        .test {
-            clear: both;
+        body {
+            height: 8000px;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
         }
     </style>
+
 </head>
 
 <body>
-    <div class="bg-info clearfix">
-        <button type="button" class="btn btn-secondary float-start">Example Button floated left</button>
-        <button type="button" class="btn btn-secondary float-end">Example Button floated right</button>
+
+    <img src="" alt="">
+    <img src="" alt="">
+    <div id="myId">This is for Id</div>
+
+    <div class="myClass"><span>test</span> This is for class</div>
+    <div class="myClass">This is for class</div>
+    <div class="myClass">This is for class</div>
+
+    <span>This is span not test</span>
+    <hr>
+    <input type="text" value="test" name="myInput" />
+    <button onclick="changeType()">Hide</button>
+    <hr>
+    <input type="text" value="testdddddd" name="myInput" />
+    <button onclick="showValue()">Click me</button>
+    <span id="output"></span>
+    <hr>
+    <form action="">
+        <input type="text" value="test" name="myInput" />
+        <input type="text" value="test" name="myInput" />
+        <input type="text" value="test" name="myInput" />
+    </form>
+
+
+    <div id="newDivision">
+        This is new division
+        <span>
+            This is span
+        </span>
     </div>
 
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem magni ipsum fugit quidem. Accusantium reprehenderit
-        possimus architecto dolorem quam beatae nisi fuga labore totam illo distinctio libero ex, modi veniam.</p>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up"
-        viewBox="0 0 16 16">
-        <path fill-rule="evenodd"
-            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
-    </svg>
+    <hr>
+    <input type="text" id="input1" />
+    <button onclick="testPassword()">Test</button>
+    <div id="output1" class="red"></div>
+    <hr>
 
-    <div class="fixed-bottom">
-        This is top
-    </div>
-
-    <div class="position-relative m-4">
-        <div class="progress" role="progressbar" aria-label="Progress" aria-valuenow="50" aria-valuemin="0"
-            aria-valuemax="100" style="height: 1px;">
-            <div class="progress-bar" style="width: 100%"></div>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-8">
+                <input class="form-control" type="text" id="taskInput" />
+            </div>
+            <div class="col-4 gap-2 d-flex justify-content-end">
+                <button class="btn btn-danger" onclick="removeAllTasks()">Remove all tasks</button>
+                <button class="btn btn-primary" onclick="addNewTask()">Add</button>
+            </div>
         </div>
-        <button type="button"
-            class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill"
-            style="width: 2rem; height:2rem;">1</button>
-        <button type="button"
-            class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill"
-            style="width: 2rem; height:2rem;">2</button>
-        <button type="button"
-            class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-primary rounded-pill"
-            style="width: 2rem; height:2rem;">3</button>
+        <ul class="list-group" id="tasksOutput"></ul>
     </div>
-    <script src="./js/bootstrap.bundle.min.js"></script>
-
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
