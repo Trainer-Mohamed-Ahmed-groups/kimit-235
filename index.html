@@ -4,77 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Front end session</title>
-
-    <style>
-        body {
-            height: 8000px;
-        }
-
-        .red {
-            color: red;
-        }
-
-        .green {
-            color: green;
-        }
-    </style>
 
 </head>
 
 <body>
+    <div id="output">This is from HTML</div>
 
-    <img src="" alt="">
-    <img src="" alt="">
-    <div id="myId">This is for Id</div>
+    <ul id="myUl">
+        <li>This is test1</li>
+        <!-- Comment -->
+        <li>
+            <a href="">rs</a>2
+        </li>
+        <li>This is test3</li>
+        <li>This is test4</li>
+    </ul>
 
-    <div class="myClass"><span>test</span> This is for class</div>
-    <div class="myClass">This is for class</div>
-    <div class="myClass">This is for class</div>
 
-    <span>This is span not test</span>
+    <form id="test"></form>
     <hr>
-    <input type="text" value="test" name="myInput" />
-    <button onclick="changeType()">Hide</button>
-    <hr>
-    <input type="text" value="testdddddd" name="myInput" />
-    <button onclick="showValue()">Click me</button>
-    <span id="output"></span>
-    <hr>
-    <form action="">
-        <input type="text" value="test" name="myInput" />
-        <input type="text" value="test" name="myInput" />
-        <input type="text" value="test" name="myInput" />
-    </form>
+    <div id="classExplain" class="textColor">This is classExplain</div>
 
 
-    <div id="newDivision">
-        This is new division
-        <span>
-            This is span
-        </span>
-    </div>
-
-
-    <hr>
-    <input type="text" id="input1" />
-    <button onclick="testPassword()">Test</button>
-    <div id="output1" class="red"></div>
-    <hr>
-
-    <div class="container">
-        <div class="row mb-3">
-            <div class="col-8">
-                <input class="form-control" type="text" id="taskInput" />
-            </div>
-            <div class="col-4 gap-2 d-flex justify-content-end">
-                <button class="btn btn-danger" onclick="removeAllTasks()">Remove all tasks</button>
-                <button class="btn btn-primary" onclick="addNewTask()">Add</button>
-            </div>
-        </div>
-        <ul class="list-group" id="tasksOutput"></ul>
-    </div>
+    <ol id="myList">
+        <li>test 1</li>
+        <li>test 2</li>
+        <li>test 3</li>
+        <li>test 4</li>
+    </ol>
+    <button onclick="classAddition()">Click me</button>
+    <button onclick="removeYourChild()">removeChild</button>
     <script src="./js/main.js"></script>
 </body>
 

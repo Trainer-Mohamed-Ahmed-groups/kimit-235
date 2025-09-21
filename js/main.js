@@ -1,98 +1,78 @@
-console.log(window.document);
-console.log(document);
-console.log(document.body);
-console.log(document.head);
-console.log(document.characterSet);
-console.log(document.title);
-console.log(document.images);
-console.log(document.forms);
-
-// ///////////////////////////////////////////
-console.log(document.getElementById("myId"));
-
-console.log(document.getElementById("myIdsdfsdfdf"));
-
-console.log(document.getElementsByClassName("myClass"));
+console.log(document.createElement('img'));
 
 
-console.log(document.getElementsByClassName("myClasssdfsdfsdf"));
+var output = document.getElementById('output');
+
+var myTag = document.createElement('span'),
+    myText = document.createTextNode("Hello World")
+
+console.log(myTag);
+console.log(myText);
+myTag.append(myText);
+myTag.append('This is from outside');
+myTag.prepend('This is more');
 
 
-console.log(document.getElementsByTagName("div").myId);
-////////////////////////////////////////////////////////////
-var myInputs = document.getElementsByTagName("input");
+// output.append(myTag)
+output.appendChild(myTag)
+output.appendChild(document.createComment("This comment from JS"))
+/*************************************************** */
+var myUl = document.getElementById('myUl');
 
-var myCustomInput = myInputs[0],
-    myCustomInput2 = myInputs[1],
-    myBtn = document.getElementsByTagName('button')[0],
-    output = document.getElementById('output');
-console.log(myCustomInput);
+console.log(myUl.children);
+console.log(myUl.childNodes);
 
-function changeType() {
-    if (myCustomInput.getAttribute('type') === 'text') {
-        myCustomInput.setAttribute("type", "password");
-        myBtn.innerHTML = "Show";
-    }
-    else {
-        myCustomInput.setAttribute("type", "text");
-        myBtn.innerHTML = "Hide";
-    }
+myUl.style.color = '#F00';
+myUl.style.backgroundColor = '#EEE'
+
+/********************************************* */
+var testTag = document.getElementById('test');
+
+
+for (let index = 0; index < 4; index++) {
+    let myInput = document.createElement('input');
+    myInput.setAttribute('type', 'text')
+    myInput.setAttribute('placeholder', 'This is test')
+    myInput.setAttribute('name', 'user_' + (index + 1))
+    testTag.appendChild(myInput)
+}
+/********************************************* */
+var classExplain = document.querySelector('#classExplain');
+
+function classAddition() {
+    // classExplain.className = 'testBg'
+    // classExplain.classList.add('testBg')
+    // classExplain.classList.remove('textColor')
+    // classExplain.classList.toggle('testBg')
+    // console.log(classExplain.classList.item(0));
+    console.log(classExplain.classList.contains('ok'));
 }
 
 
-console.log(myCustomInput2.value);
 
-var showValue = () => output.innerHTML = `<h2>${myCustomInput2.value}</h2>`
-//////////////////////////////////////////////////
-console.log(document.querySelector("#myId"));
-console.log(document.querySelector("div"));
-
-var mySpan = document.querySelectorAll('div>span')
-mySpan[0].innerHTML = mySpan[0].innerHTML.toUpperCase() + mySpan[0].innerHTML.length
-
-var newDivision = document.getElementById('newDivision')
-
-console.log(newDivision.innerText);
-console.log(newDivision.innerHTML);
-console.log(newDivision.outerHTML);
-
-/********************************************************* */
-var myNewInput = document.getElementById('input1'),
-    myNewSpan = document.getElementById('output1');
+console.log(myUl.firstChild);
+console.log(myUl.firstElementChild);
+console.log(myUl.lastChild);
+console.log(myUl.lastElementChild);
+/****************************************** */
+const newNode = document.createElement("li");
+const textNode = document.createTextNode("Water");
+newNode.appendChild(textNode);
 
 
-console.log(myNewInput);
-console.log(myNewSpan);
-var testPassword = () => {
-    if (myNewInput.value.length < 8) {
-        myNewSpan.innerHTML = "<span class='red'>Weak password</span>"
-    }
-    else {
-        myNewSpan.innerHTML = "<span class='green'>Good password</span>"
-    }
-}
-/***************************************************** */
-var taskInput = document.getElementById('taskInput');
-var tasksOutput = document.getElementById('tasksOutput');
+const myList = document.getElementById('myList');
 
-console.log(taskInput);
-console.log(tasksOutput);
-function addNewTask() {
-    if (taskInput.value !== "") {
-        tasksOutput.innerHTML += `<li class="list-group-item">${taskInput.value}</li>`
-        taskInput.value = ""
-        taskInput.focus()
-    }
-    else {
-        alert("Please enter a valid task")
-    }
+console.log(newNode);
+
+
+// myList.appendChild(newNode)
+myList.insertBefore(newNode, myList.children[3])
+
+
+function removeYourChild() {
+    myList.removeChild(myList.firstElementChild)
 }
 
 
-function removeAllTasks() {
-
-    if (confirm("Are you sure you want to delete all tasks?")) {
-        tasksOutput.innerHTML = ""
-    }
-    else { }
-}
+console.log(myList.firstElementChild.nextElementSibling);
+console.log(myList.lastElementChild.previousElementSibling);
