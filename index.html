@@ -4,38 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./css/style.css">
     <title>Front end session</title>
 
 </head>
 
 <body>
-    <div id="output">This is from HTML</div>
+    <button id="myBtn">Click me</button>
 
-    <ul id="myUl">
-        <li>This is test1</li>
-        <!-- Comment -->
-        <li>
-            <a href="">rs</a>2
-        </li>
-        <li>This is test3</li>
-        <li>This is test4</li>
+    <input type="text" id="myInput">
+
+    <div id="output"></div>
+
+    <hr>
+    <form action="">
+        <input type="text">
+        <input type="submit" value="OK">
+    </form>
+
+    <ul>
+        <li>Test 1</li>
+        <li>Test 2</li>
+        <li>Test 3</li>
+        <li>Test 4</li>
+        <li>Test 5</li>
     </ul>
 
 
-    <form id="test"></form>
-    <hr>
-    <div id="classExplain" class="textColor">This is classExplain</div>
-
-
-    <ol id="myList">
-        <li>test 1</li>
-        <li>test 2</li>
-        <li>test 3</li>
-        <li>test 4</li>
-    </ol>
-    <button onclick="classAddition()">Click me</button>
-    <button onclick="removeYourChild()">removeChild</button>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-8">
+                <input class="form-control" type="text" id="taskInput" />
+            </div>
+            <div class="col-4 gap-2 d-flex justify-content-end">
+                <button class="btn btn-danger" onclick="removeAllTasks()">Remove all tasks</button>
+                <button class="btn btn-primary" onclick="addNewTask()">Add</button>
+            </div>
+        </div>
+        <ol class="list-group list-group-numbered" id="tasksOutput"></ol>
+        <span class="badge text-bg-secondary" id="tasksCounter"></span>
+    </div>
     <script src="./js/main.js"></script>
 </body>
 

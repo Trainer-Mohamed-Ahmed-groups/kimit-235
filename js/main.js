@@ -1,78 +1,104 @@
-console.log(document.createElement('img'));
+var myBtn = document.getElementById('myBtn'),
+    myInput = document.getElementById('myInput'),
+    output = document.getElementById('output'),
+    myForm = document.forms[0];
 
 
-var output = document.getElementById('output');
-
-var myTag = document.createElement('span'),
-    myText = document.createTextNode("Hello World")
-
-console.log(myTag);
-console.log(myText);
-myTag.append(myText);
-myTag.append('This is from outside');
-myTag.prepend('This is more');
+function sayHello() { console.log("Hello"); }
 
 
-// output.append(myTag)
-output.appendChild(myTag)
-output.appendChild(document.createComment("This comment from JS"))
-/*************************************************** */
-var myUl = document.getElementById('myUl');
-
-console.log(myUl.children);
-console.log(myUl.childNodes);
-
-myUl.style.color = '#F00';
-myUl.style.backgroundColor = '#EEE'
-
-/********************************************* */
-var testTag = document.getElementById('test');
+// myBtn.onclick = sayHello
+// myBtn.onclick = () => console.log("This is another");
 
 
-for (let index = 0; index < 4; index++) {
-    let myInput = document.createElement('input');
-    myInput.setAttribute('type', 'text')
-    myInput.setAttribute('placeholder', 'This is test')
-    myInput.setAttribute('name', 'user_' + (index + 1))
-    testTag.appendChild(myInput)
-}
-/********************************************* */
-var classExplain = document.querySelector('#classExplain');
-
-function classAddition() {
-    // classExplain.className = 'testBg'
-    // classExplain.classList.add('testBg')
-    // classExplain.classList.remove('textColor')
-    // classExplain.classList.toggle('testBg')
-    // console.log(classExplain.classList.item(0));
-    console.log(classExplain.classList.contains('ok'));
-}
+// myBtn.addEventListener('click', sayHello)
+// myBtn.addEventListener('click', () => console.log("This is another"))
 
 
 
-console.log(myUl.firstChild);
-console.log(myUl.firstElementChild);
-console.log(myUl.lastChild);
-console.log(myUl.lastElementChild);
-/****************************************** */
-const newNode = document.createElement("li");
-const textNode = document.createTextNode("Water");
-newNode.appendChild(textNode);
+
+// myBtn.addEventListener('dblclick', () => console.log("This is another"))
+// myBtn.addEventListener('contextmenu', () => console.log("This is another"))
+// myBtn.addEventListener('contextmenu', () => console.log("This is another"))
 
 
-const myList = document.getElementById('myList');
+// myInput.addEventListener('focus', () => console.log("OK"))
+// myInput.addEventListener('blur', () => console.log("OK"))
 
-console.log(newNode);
+// myInput.addEventListener('keyup', (e) => output.textContent = e.target.value)
+// myInput.addEventListener('keypress', (e) => output.textContent = e.target.value)
+// myInput.addEventListener('keydown', (e) => output.textContent = e.target.value)
 
 
-// myList.appendChild(newNode)
-myList.insertBefore(newNode, myList.children[3])
+// myInput.addEventListener('change', (e) => output.textContent = e.target.value)
+myInput.addEventListener('change', (e) => output.textContent = `<span>${e.target.value}</span>`)
 
 
-function removeYourChild() {
-    myList.removeChild(myList.firstElementChild)
+
+myForm.addEventListener('submit', (event) => {
+    event.preventDefault()
+    console.log("test")
+})
+
+// alert("sdfsdf")
+window.onload = () => console.log("Loaded");
+
+
+/************************************************* */
+
+var myUl = document.getElementsByTagName('ul')[0];
+
+
+for (let index = 0; index < myUl.children.length; index++) {
+    const element = myUl.children[index];
+    element.onclick = (ev) => console.log(ev.target.innerHTML);
 }
 
 
-console.log(myList.firstElementChild.nextElementSibling);
-console.log(myList.lastElementChild.previousElementSibling);
+
+/****************************************************************** */
+/***************************************************** */
+var taskInput = document.getElementById('taskInput');
+var tasksOutput = document.getElementById('tasksOutput');
+var tasksCounter = document.getElementById('tasksCounter');
+
+console.log(taskInput);
+console.log(tasksOutput);
+
+
+function addNewTask() {
+    finishTask()
+    if (taskInput.value !== "") {
+        tasksOutput.innerHTML += `<li class="list-group-item">${taskInput.value}</li>`
+        afterAdd();
+    }
+    else {
+        alert("Please enter a valid task")
+    }
+}
+
+
+for (let index = 0; index < tasksOutput.children.length; index++) {
+    const element = tasksOutput.children[index];
+    console.log(element);
+    element.addEventListener('click', (ev) => console.log(ev.target))
+}
+
+function removeAllTasks() {
+
+    if (confirm("Are you sure you want to delete all tasks?")) {
+        tasksOutput.innerHTML = ""
+    }
+    else { }
+}
+
+function afterAdd() {
+    taskInput.value = ""
+    taskInput.focus()
+    tasksCounter.textContent = tasksOutput.children.length
+}
+
+
+
+// Tasks counter
+// Finish task
