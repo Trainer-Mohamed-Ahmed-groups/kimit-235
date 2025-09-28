@@ -1,8 +1,25 @@
-.testBg {
-    background-color: #eee;
-    font-weight: bold;
-    border-radius: 5px;
+nav {
+  display: flex;
+  justify-content: start;
+  color: #d0ff00;
+  background-color: #00ffff;
+  text-align: center;
+  border-radius: 5px;
+  border: 5px solid #00F;
+  box-shadow: 5px 5px #F00;
 }
-.textColor {
-    color: red;
+
+.parent {
+  font-weight: bold;
+  border-radius: 10px;
+  border: 10px solid #00F;
+  box-shadow: 10px 10px aqua;
 }
+.parent > .child {
+  font-size: 2rem;
+  color: #d0ff00;
+}
+
+/* This is CSS comment */
+
+/*# sourceMappingURL=style.css.map */
