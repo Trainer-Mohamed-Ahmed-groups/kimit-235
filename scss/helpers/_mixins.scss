@@ -1,5 +1,0 @@
-@mixin myRounded($value, $color:#F00) {
-    border-radius: $value;
-    border: $value solid #00F;
-    box-shadow: $value $value $color;
-}
