@@ -4,34 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>Front end session</title>
 
 </head>
 
 <body>
-    <div class="grid_container">
-        <div class="grid_item">1</div>
-        <div class="grid_item">2</div>
-        <div class="grid_item">3</div>
-        <div class="grid_item">4</div>
-        <div class="grid_item">5</div>
-        <div class="grid_item">6</div>
-        <div class="grid_item">7</div>
-        <div class="grid_item">8</div>
-        <div class="grid_item">9</div>
+
+    <div class="container mt-5">
+        <div class="text-center" id="loading">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <div class="row row-cols-md-2 row-cols-lg-4 g-4" id="output"></div>
     </div>
+    <p><a id="w3s" href="https://www.w3schools.com/?id=1">
+            https://www.w3schools.com/?answer=yes</a></p>
+
+    <p id="demo"></p>
+
+    <script>
+        let anchor = document.getElementById("w3s");
+        let query = anchor.search;
+        console.log(query);
+    </script>
+    <script>
+        var jsonObj = '{"name": "John","age": 30,"city": "New York"}';
+        console.log(jsonObj);
+        console.log(typeof jsonObj);
+        console.log(JSON.parse(jsonObj));
+        console.log("*".repeat(20));
+
+        var jsObj = {
+            name: "Mohamed",
+            city: "Cairo"
+        }
+        console.log(jsObj);
+        console.log(JSON.stringify(jsObj));
+        console.log(typeof jsObj);
 
 
-    <div class="grid_container2">
-        <nav>This is header</nav>
-        <div class="sidebar">This is sidebar</div>
-        <section class="content">This is content</section>
-        <footer>This is footer</footer>
-    </div>
-
-    <script type="module" src="./js/session.js"></script>
-    <script type="module" src="./js/main.js"></script>
+    </script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
